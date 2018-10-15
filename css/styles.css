@@ -38,21 +38,43 @@ header ul li {
     padding: 10px;
     border-right: 1px solid #555;
     position: relative;
+    cursor: pointer;
 }
 
 header ul li.settings { float: right; border-right: none; }
 header ul li.user { float: right; }
-header ul li.search { float: right; }
-header ul li.messages { float: right; }
-header ul li.notifications { float: right; }
-header ul li.search { float: right; }
+header ul li.search { position: absolute; left: 220px; border-right: none; cursor: pointer; }
+header ul li.messages { float: right; border-left: 1px solid #555; }
 
-/*
-header ul li.logo { width: 200px; position: absolute; left: 150px; height: 20px; 
-padding-left: 0; padding-right: 0; 
-background: url(../images/logo-paul.svg) no-repeat 0 0; background-size: contain;
+
+header ul li.notifications { float: right; }
+header ul li.notifications:hover { color: yellow; }
+
+
+header ul li.search { position: relative; left: 5px; cursor:  pointer; }
+header ul li.menu { cursor: pointer; }
+
+header ul li.search input { 
+    margin: 0; 
+    height: 75%;
+    padding: 2px 5px 5px 35px;
+    position: absolute; 
+    opacity: 0;
+    top: 0; 
+    left: 0;
+    right: -50px;
+    border: none;
+    background-color: transparent;   
+    font-size: 1.5em;
+    z-index: -1;
 }
-*/
+
+
+
+header ul li.search input:focus
+{
+    opacity: 1;
+}
 
 header ul li.logo { background: url(../images/logo-paul.svg) no-repeat center center; background-size: contain; width: 125px; padding-right: 14px;  }
 
@@ -82,12 +104,21 @@ header ul li span.last { top: 48%; }
     
 }
 
+.sidebar.minimized {
+    width: 50px; 
+}
+
 .sidebar > ul {
-    padding: 50px 0 0 20px;
+    padding: 60px 0;
     list-style: none;
 }
 
-.sidebar li { padding: 10px 0; }
+.sidebar.minimized i { padding: 10px 10px; }
+.sidebar.minimized span { visibility: hidden; }
+
+.sidebar li { width: 200px; height: 35px; }
+.sidebar li:hover { background: rgba(255,255,255,.3); cursor: pointer; border-radius: 25px; }
+
 .sidebar li span { padding-left: 5px; }
 
 article {
@@ -99,4 +130,15 @@ article {
 article aside { margin: 0; padding-left: 20px; width: 100%; }
 
 article aside h2 { display: inline-block; padding-left: 20px; }
+
+.tooltip { visibility: hidden; width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;}
 
