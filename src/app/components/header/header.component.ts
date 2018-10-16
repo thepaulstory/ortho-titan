@@ -1,3 +1,4 @@
+import { SidebarService } from './../../services/sidebar.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public side: SidebarService) { }
 
   ngOnInit() {
+  }
+
+  mnuToggle() {
+    this.side.minimized = !this.side.minimized;
   }
 
 }

@@ -1,0 +1,94 @@
+$navy: #001f3f
+$blue: #0074d9
+$aqua: #7FDBFF
+$teal: #39CCCC
+$olive: #3D9970
+$green: #2ECC40
+$lime: #01FF70
+$yellow: #FFDC00
+$orange: #FF851B
+$red: #FF4136
+$maroon: #85144b
+$fuchsia: #F012BE
+$purple: #B10DC9
+$black: rgba(62, 69, 76, 1)
+$gray: #AAAAAA
+$silver: #DDDDDD
+$white: #FFFFFF
+
+
+header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  background-color: $black
+  z-index: 1
+  ul
+    padding: 0
+    margin: 0
+    list-style: none
+    padding: 10px
+    li
+      display: block
+      float: left
+      height: 20px
+      margin: 0 0 10px 0
+      padding: 10px
+      border-right: 1px solid $silver
+      position: relative
+      cursor: pointer
+      &.settings
+        float: right
+        border-right: none
+      &.user
+        float: right
+      &.search
+        position: absolute
+        left: 220px
+        border-right: none
+        cursor: pointer
+      &.messages
+        float: right
+        border-left: 1px solid $silver
+      &.notifications
+        float: right
+        &:hover
+          color: yellow
+      &.search
+        position: relative
+        left: 5px
+        cursor: pointer
+      &.menu
+        cursor: pointer
+      &.search input
+        margin: 0
+        height: 75%
+        padding: 2px 5px 5px 35px
+        position: absolute
+        opacity: 0
+        top: 0
+        left: 0
+        right: -50px
+        border: none
+        background-color: transparent
+        font-size: 1.5em
+        z-index: -1
+        &:focus
+          opacity: 1
+      &.logo
+        background: url(../../../assets/images/logo-paul.svg) no-repeat center center
+        background-size: contain
+        width: 125px
+        padding-right: 14px
+      span
+        position: absolute
+        top: 5%
+        left: 30%
+        padding: 0
+        margin: 0
+        &.last
+          top: 48%
+
+.user
+  width: 110px
