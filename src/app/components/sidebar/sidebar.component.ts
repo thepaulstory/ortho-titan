@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 export class SidebarComponent implements OnInit {
 
 
-  constructor(private side: SidebarService) { }
+  constructor(public side: SidebarService) { }
 
   ngOnInit() {
   }
