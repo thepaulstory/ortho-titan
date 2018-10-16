@@ -1,7 +1,7 @@
 {
   "name": "ortho-titan",
   "engines" : { "node" : "10.3.0" },
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "http-server dist/ortho-titan",
